@@ -17,6 +17,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        baidu {}
+        _91 {}
+        wandoujia {}
+        xiaomi {}
+    }
+
+    //批量处理
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [channel: name]
+    }
 }
 
 dependencies {

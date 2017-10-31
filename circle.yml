@@ -1,0 +1,21 @@
+dependencies:
+  pre:
+    - echo y | android update sdk --no-ui --all --filter tool
+    - echo y | android update sdk --no-ui --all --filter build-tools-26.0.0
+    - echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+    - cp -r licenses $ANDROID_HOME
+  override:
+    - ./gradlew dependencies --stacktrace || true
+
+test:
+  override:
+    - ./gradlew assembleDebug
+    - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - ./tools/pgyer-upload.sh
+
+

@@ -25,10 +25,10 @@ android {
     }
 
     productFlavors {
-//        baidu {}
-//        _91 {}
-//        wandoujia {}
-//        xiaomi {}
+        baidu {}
+        _91 {}
+        wandoujia {}
+        xiaomi {}
     }
 
     //批量处理

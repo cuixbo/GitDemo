@@ -22,9 +22,12 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Build
-          command: ./gradlew assembleDebug
+          command: ./gradlew assemblePgyerDebug
       - store_artifacts:
           path: app/build/outputs
 #          destination: outputs
-      - store_test_results:
-          path: app/build/test-results
+#      - store_test_results:
+#          path: app/build/test-results
+      - run:
+          name: Upload to Pgyer
+          command: ./pgyer-upload.sh

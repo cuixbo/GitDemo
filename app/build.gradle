@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.xbc.git.test"
         minSdkVersion 15
@@ -24,17 +23,30 @@ android {
         }
     }
 
+    flavorDimensions "market"
     productFlavors {
-        pgyer {}
-        baidu {}
-        _91 {}
-        wandoujia {}
-        xiaomi {}
+        pgyer {
+            dimension "market"
+        }
+        baidu {
+            dimension "market"
+        }
+        _91 {
+            dimension "market"
+        }
+        wandoujia {
+            dimension "market"
+        }
+        xiaomi {
+            dimension "market"
+        }
     }
 
     //批量处理
     productFlavors.all {
-        flavor -> flavor.manifestPlaceholders = [channel: name]
+        flavor ->
+            flavor.manifestPlaceholders = [channel: name]
+//            flavor.dimension="market"
     }
 }
 

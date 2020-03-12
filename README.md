@@ -9,3 +9,4 @@ A.测试vim git commit 信息填写提交 命令:
 
 B.测试移动本地HEAD至上一次commit处，修改部分文件后commit会怎样？
     1.
+    2.

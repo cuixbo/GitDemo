@@ -10,3 +10,7 @@ A.测试vim git commit 信息填写提交 命令:
 B.测试移动本地HEAD至上一次commit处，修改部分文件后commit会怎样？
     1.
     2.
+
+C.git stash我的代码（比如当前任务未完成，需要将已commit的信息push到远程仓库，可以先将手头任务stash，push完之后，在stash pop继续完成)
+    1.git stash 将代码放入缓存区
+    2.git stash pop 从缓存区释放代码

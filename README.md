@@ -11,6 +11,7 @@ B.测试移动本地HEAD至上一次commit处，修改部分文件后commit会�
     1.
     2.
 
-C.git stash我的代码（比如当前任务未完成，需要将已commit的信息push到远程仓库，可以先将手头任务stash，push完之后，在stash pop继续完成)
+C.Git保存与恢复工作进度：git stash我的代码（比如当前任务未完成，需要将已commit的信息push到远程仓库，可以先将手头任务stash，push完之后，在stash pop继续完成)
     1.git stash 将代码放入缓存区
     2.git stash pop 从缓存区释放代码
+    3.git stash 可以添加参数，控制是否stash已被跟踪（暂存区)的文件

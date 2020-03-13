@@ -8,7 +8,7 @@ A.测试vim git commit 信息填写提交 命令:
     3.进入insert模式后，填写完信息，如何进行提交确认呢？同样需要按ESC退出insert模式，再输入:wq则可以保存并退出，即提交
 
 B.测试移动本地HEAD至上一次commit处，修改文件后再次commit会怎样？
-    1.第二次commit会产生一个类似分支的commit，HEAD会指向它。
+    1.第二次commit会产生一个兄弟commit，HEAD会指向它。
     2.可以切回到master将该commit与master进行合并
 
 C.Git保存与恢复工作进度：git stash我的代码（比如当前任务未完成，需要将已commit的信息push到远程仓库，可以先将手头任务stash，push完之后，在stash pop继续完成)
